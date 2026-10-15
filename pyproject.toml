@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "langchain-mesharc"
+version = "0.1.0"
+description = "LangChain integration for MeshArc: web pages as Documents, and web search and page reading as agent tools."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["langchain-core>=1.0,<2", "mesharc>=0.6,<1"]
+
+keywords = ["langchain", "mesharc", "web-scraping", "crawler", "document-loader", "rag", "markdown", "change-detection"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Typing :: Typed",
+  "Operating System :: OS Independent",
+  "Topic :: Internet :: WWW/HTTP",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.23", "langchain-tests==1.1.9", "build", "twine", "ruff>=0.16", "mypy>=1.18"]
+
+[project.urls]
+Homepage = "https://mesharc.dev"
+Documentation = "https://github.com/mesharc-org/langchain-mesharc#readme"
+Source = "https://github.com/mesharc-org/langchain-mesharc"
+Issues = "https://github.com/mesharc-org/langchain-mesharc/issues"
+Privacy = "https://mesharc.dev/legal/privacy"
+
+[tool.setuptools.packages.find]
+include = ["langchain_mesharc*"]
+
+[tool.setuptools.package-data]
+langchain_mesharc = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+target-version = "py310"
+extend-exclude = [".venv*"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+
+[tool.mypy]
+python_version = "3.10"
+files = ["langchain_mesharc"]
