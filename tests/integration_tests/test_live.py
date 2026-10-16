@@ -36,7 +36,9 @@ class TestLiveSearch(ToolsIntegrationTests):
 def test_live_scrape_loader():
     docs = MeshArcLoader("https://example.com/").load()
     assert len(docs) == 1
-    assert "Example Domain" in docs[0].page_content
+    # The page's heading is its title; the main text is the paragraph below it.
+    assert docs[0].metadata["title"] == "Example Domain"
+    assert "documentation examples" in docs[0].page_content
     assert docs[0].metadata["status"] == 200
 
 
