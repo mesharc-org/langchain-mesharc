@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1
+
+Documentation only; no change to the code.
+
+- The package's documentation link on PyPI points at the full guide, [mesharc.dev/docs/langchain](https://mesharc.dev/docs/langchain), and the README links to it.
+- The README's `changes` example no longer shows a `prj_` project id; MeshArc project ids have no prefix.
+
 ## 0.1.0
 
 The first release.

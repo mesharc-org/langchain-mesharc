@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "langchain-mesharc"
-version = "0.1.0"
+version = "0.1.1"
 description = "LangChain integration for MeshArc: web pages as Documents, and web search and page reading as agent tools."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -31,7 +31,7 @@ dev = ["pytest>=8", "pytest-asyncio>=0.23", "langchain-tests==1.1.9", "build", "
 
 [project.urls]
 Homepage = "https://mesharc.dev"
-Documentation = "https://github.com/mesharc-org/langchain-mesharc#readme"
+Documentation = "https://mesharc.dev/docs/langchain"
 Source = "https://github.com/mesharc-org/langchain-mesharc"
 Issues = "https://github.com/mesharc-org/langchain-mesharc/issues"
 Privacy = "https://mesharc.dev/legal/privacy"

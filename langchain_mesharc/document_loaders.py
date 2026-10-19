@@ -44,7 +44,7 @@ class MeshArcLoader(BaseLoader):
             docs = MeshArcLoader("https://example.com/pricing").load()
             docs = MeshArcLoader("https://docs.example.com", mode="crawl",
                                  params={"limit": 50}).load()
-            changed = MeshArcLoader(mode="changes", project_id="prj_...").load()
+            changed = MeshArcLoader(mode="changes", project_id="<project id>").load()
     """
 
     def __init__(
