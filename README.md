@@ -5,6 +5,8 @@ The LangChain integration for [MeshArc](https://mesharc.dev), the web crawler th
 - **`MeshArcLoader`** loads web pages as LangChain `Document`s, in four modes: scrape, crawl, map and changes.
 - **`MeshArcSearch`** and **`MeshArcScrape`** are tools an agent can call to search the web and read pages.
 
+The full guide, with every option, the metadata on each Document and how to keep a vector store current, is at **[mesharc.dev/docs/langchain](https://mesharc.dev/docs/langchain)**.
+
 ```bash
 pip install langchain-mesharc
 ```
@@ -30,7 +32,7 @@ for doc in loader.lazy_load():
 urls = MeshArcLoader("https://docs.example.com", mode="map").load()
 
 # What changed on a watched site since the last crawl
-changed = MeshArcLoader(mode="changes", project_id="prj_...").load()
+changed = MeshArcLoader(mode="changes", project_id="<project id>").load()
 ```
 
 | Mode | Input | Each Document |
@@ -82,7 +84,7 @@ See [pricing](https://mesharc.dev/pricing).
 
 ## Links
 
-- [MeshArc docs](https://mesharc.dev/docs) and [API reference](https://mesharc.dev/docs/api)
+- [The LangChain guide](https://mesharc.dev/docs/langchain), [MeshArc docs](https://mesharc.dev/docs) and [API reference](https://mesharc.dev/docs/api)
 - [The Python SDK](https://github.com/mesharc-org/mesharc-python), which this package uses
 - [Questions](https://github.com/orgs/mesharc-org/discussions) · security reports to security@mesharc.dev
 
